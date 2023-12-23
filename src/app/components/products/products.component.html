@@ -1,0 +1,27 @@
+<section class="product-container">
+    <table class="table  table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Description</th>
+                <th scope="col">Product Image</th>
+                <th scope="col">Product Price </th>
+                <th scope="col">Navigate </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productDetails;">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName | uppercase }}</td>
+                <td>{{product.productDescription }}</td>
+                <td><img [src]="product.productImage" /></td>
+                <td>{{product.productPrice }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="navigateToProductDetails(product)">Product Details</button>
+                    <button class="btn btn-secondary" (click)="navigateToProductInfo(product)">Product Info</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

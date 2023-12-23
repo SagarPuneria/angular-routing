@@ -1,0 +1,11 @@
+.product-container{
+    border:2px solid blue;
+    margin:10px;
+    padding:10px;
+    width:auto;
+}
+
+img{
+    height:100px;
+    width:100px;
+}
