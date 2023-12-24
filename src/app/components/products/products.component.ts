@@ -10,10 +10,10 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductsComponent implements OnInit {
 
-  // public productDetails:IProductDetails[];
-  public productDetails: IProductDetails[] = [];
+  public productDetails: IProductDetails[];
+  // public productDetails: IProductDetails[] = []; // Bad pratice: Should avoid initializing the array outside the constructor
   constructor(public productService: ProductService, public router: Router, public route: ActivatedRoute) {
-    // this.productDetails = [];
+    this.productDetails = [];
   }
 
   ngOnInit(): void {
